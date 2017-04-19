@@ -1,5 +1,5 @@
 
-# shopping cart practic
+# shopping cart practice
 
 ## TIY Week 8, day 37
 
