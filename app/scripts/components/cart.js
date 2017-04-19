@@ -22,10 +22,11 @@ class Cart extends React.Component {
             <table>
               {this.props.cart.map(item => {
                 return (
-                  <tr key={Math.random()}>
-                    <td>{item.type}</td>
-                    <td>{item.price}</td>
-                  </tr>
+                  <CartItem
+                    key={Math.random()}
+                    type={item.type}
+                    price={item.price}
+                  />
                 );
               })}
               <tr>

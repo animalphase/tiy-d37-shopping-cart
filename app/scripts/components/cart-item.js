@@ -10,9 +10,10 @@ class CartItem extends React.Component {
 
   render() {
     return (
-      <li>
-        cart item
-      </li>
+      <tr>
+        <td>{this.props.type}</td>
+        <td>{this.props.price}</td>
+      </tr>
     );
   }
 }
