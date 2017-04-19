@@ -29,6 +29,7 @@ class Cart extends React.Component {
                   />
                 );
               })}
+              <hr />
               <tr>
                 <td>Total:</td>
                 <td>${this.props.cartTotal}</td>

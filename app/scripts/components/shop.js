@@ -16,24 +16,31 @@ class Shop extends React.Component {
 
   render() {
     return (
-      <main>
-        <section className="shopping-section">
+      <div>
+        <header>
           <h1>Shopping for cyborgs</h1>
-          <h2>Store List</h2>
-          <table>
-            {this.props.storeItems.map((item, index) => {
-              return (
-                <tr key={Math.random()}>
-                  <td><button onClick={() => this.addItem(item)}>+</button></td>
-                  <td>{item.type}</td>
-                  <td>{item.price}</td>
-                </tr>
-              );
-            })}
-          </table>
+          <hr />
+        </header>
+        <main className="main-wrapper">
+          <section className="shopping-section">
+            <h2>Store List</h2>
+            <table>
+              {this.props.storeItems.map((item, index) => {
+                return (
+                  <tr key={Math.random()}>
+                    <td>
+                      <button onClick={() => this.addItem(item)}>+</button>
+                    </td>
+                    <td>{item.type}</td>
+                    <td>{item.price}</td>
+                  </tr>
+                );
+              })}
+            </table>
+          </section>
           <Cart />
-        </section>
-      </main>
+        </main>
+      </div>
     );
   }
 }
