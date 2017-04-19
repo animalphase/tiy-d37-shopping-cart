@@ -1,0 +1,47 @@
+
+header {
+  padding: 2rem;
+  border-bottom: .1rem solid $color-light;
+  @include clearfix;
+}
+
+.user-profile-link {
+  float: right;
+  vertical-align: middle;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.active {
+  font-weight: bold;
+  background: $color-light;
+}
+
+.pagination {
+  display: flex;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: .1rem solid $color-light;
+
+  * {
+    vertical-align: middle;
+  }
+}
+
+.pagination-count {
+  display: block;
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1.3rem;
+}

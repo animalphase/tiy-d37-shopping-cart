@@ -1,0 +1,38 @@
+.page-wrapper {
+  // padding: 1.6rem;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem .8rem 1rem;
+    margin-left: -1rem;
+    border-bottom: .1rem solid;
+
+    &:active {
+      background: $color-link;
+      color: $color-white;
+      transition: 0 ease all;
+    }
+  }
+}
+
+@media only screen and (min-width: 50rem) {
+  .main-nav {
+    font-size: 1.8rem;
+  }
+}
