@@ -57,8 +57,16 @@ export default function AppReducer(currentState, action) {
 
   switch (action.type) {
     case 'ADD_ITEM':
-      let newCart = currentState.cart.slice();
+      var newCart = currentState.cart.slice();
       newCart.push(action.item);
+      return Object.assign({}, currentState, {
+        cart: newCart,
+        cartTotal: calculateCartTotal(newCart)
+      });
+
+    case 'REMOVE_CART_ITEM':
+      var newCart = currentState.cart.slice();
+      newCart.splice(action.itemArrayPosition, 1);
       return Object.assign({}, currentState, {
         cart: newCart,
         cartTotal: calculateCartTotal(newCart)

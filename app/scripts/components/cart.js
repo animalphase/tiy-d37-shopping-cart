@@ -20,12 +20,13 @@ class Cart extends React.Component {
           <div className="cart-list">
             <h3>Shopping Cart</h3>
             <table>
-              {this.props.cart.map(item => {
+              {this.props.cart.map((item, index) => {
                 return (
                   <CartItem
                     key={Math.random()}
                     type={item.type}
                     price={item.price}
+                    cartPosition={index}
                   />
                 );
               })}
